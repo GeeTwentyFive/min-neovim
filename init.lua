@@ -94,6 +94,7 @@ vim.opt.clipboard = 'unnamedplus'
 
 vim.g.netrw_banner = 0
 
+vim.keymap.set({'n', 'i'}, '<F1>', '<Nop>')
 vim.keymap.set('n', '<Tab>', '<cmd>E<cr>')
 vim.keymap.set('n', '-', '<cmd>vsplit<cr>')
 

@@ -75,7 +75,7 @@ local cmp = require'cmp'
   local capabilities = require('cmp_nvim_lsp').default_capabilities()
   -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
   local lspconfig = require('lspconfig')
-  lspconfig.gopls.setup { capabilities = capabilities }
+  --lspconfig.gopls.setup { capabilities = capabilities }
   -- <-- Add other LSP servers here
 
 
@@ -100,8 +100,8 @@ vim.keymap.set('n', '-', '<cmd>vsplit<cr>')
 vim.api.nvim_create_autocmd('LspAttach', {
   callback = function(args)
     vim.keymap.set('n', '<F1>', vim.lsp.buf.hover)
-    vim.keymap.set('n', '<F2>', vim.lsp.buf.definition)
-    vim.keymap.set('n', '<F3>', vim.lsp.buf.declaration)
+    vim.keymap.set('n', '<F2>', vim.lsp.buf.declaration)
+    vim.keymap.set('n', '<F3>', vim.lsp.buf.definition)
     vim.keymap.set('n', '<F4>', vim.lsp.buf.references)
   end,
 })

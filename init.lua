@@ -34,14 +34,7 @@ local cmp = require'cmp'
     snippet = {
       expand = function(args) vim.fn["vsnip#anonymous"](args.body) end,
     },
-    window = {
-      -- completion = cmp.config.window.bordered(),
-      -- documentation = cmp.config.window.bordered(),
-    },
     mapping = cmp.mapping.preset.insert({
-      ['<C-b>'] = cmp.mapping.scroll_docs(-4),
-      ['<C-f>'] = cmp.mapping.scroll_docs(4),
-      ['<C-Space>'] = cmp.mapping.complete(),
       ['<C-e>'] = cmp.mapping.abort(),
       ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
     }),
@@ -73,8 +66,8 @@ local cmp = require'cmp'
 
   -- Set up lspconfig.
   local capabilities = require('cmp_nvim_lsp').default_capabilities()
-  -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
   local lspconfig = require('lspconfig')
+
   --lspconfig.gopls.setup { capabilities = capabilities }
   -- <-- Add other LSP servers here
 
@@ -106,4 +99,3 @@ vim.api.nvim_create_autocmd('LspAttach', {
     vim.keymap.set('n', '<F4>', vim.lsp.buf.references)
   end,
 })
-

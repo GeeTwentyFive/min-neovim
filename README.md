@@ -31,6 +31,6 @@ On line 72 & onward in `init.lua`, write `lspconfig.<NAME_OF_LSP_SERVER>.setup {
   local capabilities = require('cmp_nvim_lsp').default_capabilities()
   local lspconfig = require('lspconfig')
 
-  lspconfig.gopls.setup { capabilities = capabilities }
   lspconfig.clangd.setup { capabilities = capabilities }
+  lspconfig.gopls.setup { capabilities = capabilities }
 ```

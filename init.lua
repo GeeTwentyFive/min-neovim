@@ -1,3 +1,5 @@
+vim.cmd("highlight Normal guibg=Black guifg=White")
+
 -- init lazy.nvim --
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then

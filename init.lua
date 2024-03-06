@@ -1,4 +1,9 @@
+
 vim.cmd("highlight Normal guibg=Black guifg=White")
+
+vim.opt.guicursor = "a:ver1"
+
+
 
 -- init lazy.nvim --
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
